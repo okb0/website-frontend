@@ -4,20 +4,58 @@
     <title>Read Research Papers</title>
 </head>
 <body>
-    
-    <h1>Welcome to ReadResearchPapers.com</h1>
-    <p>This website is brought to you by a broke first-year master student studying AI, meant to help other students and researchers that have too much on their plate but still need to read research papers. 
-        Do you also find yourself having to take a shower, cook dinner, or travel to uni, but still trying to read a research paper while doing all of this and failing miserably? Same. I hope this helps.
-        I've made this website free, because I think it's dumb that everything costs money nowadays, especially in this economy. 
-        <br> <br>
-        If this website helps you out a bunch and you're very happy about it, consider helping me pay my bills this month by PayPaling me. Even the smallest bits help (trust me, I'm working three jobs next to my studies just to try to and pay bills this month).
-        Hope this helps you as much as it helps me! If you have any suggestions, don't hesitate to contact me through the contact form. I'll do my best to implement it.
-    </p>
-    
-    <h2>How it works</h2>
-    <p>It's really simple. Upload your research papers' PDF file by clicking the upload button. Wait for it to finish loading, and then you can start playing the TTS back to you. The read text is highlighted on the screen, which should help you focus if need be. You can pause the TTS whenever and highlight your PDF. 
+      <nav class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+
+    <div class="Welcome">
+        <h1>Welcome to ReadResearchPapers.com</h1>
+            <p>
+                This website is brought to you by a broke first-year master student studying AI, meant to help other students and researchers that have too much on their plate but still need to read research papers. 
+                Do you also find yourself having to take a shower, cook dinner, or travel to uni, but still trying to read a research paper while doing all of this and failing miserably? Same. I hope this helps.
+                I've made this website free, because I think it's dumb that everything costs money nowadays, especially in this economy. 
+            <br> <br>
+                If this website helps you out a bunch and you're very happy about it, consider helping me pay my bills this month by PayPaling me. Even the smallest bits help (trust me, I'm working three jobs next to my studies just to try to and pay bills this month).
+                Hope this helps you as much as it helps me! If you have any suggestions, don't hesitate to contact me through the contact form. I'll do my best to implement it.
+            </p>
+    </div>
+    <button type="button" class="collapsible">
+        <span class="collapsibletitle">How it works</span><br>
+        <span class="collapsible-sub">(click me for instructions)</span>
+    </button>
+    <div class="content">
+        <p>
+        It's really simple. Upload your research papers' PDF file by clicking the upload button. Wait for it to finish loading, and then you can start playing the TTS back to you. The read text is highlighted on the screen, which should help you focus if need be. You can pause the TTS whenever and highlight your PDF. 
         You can also speed it up and slow it down. And maybe change the voice (still working on this). Lastly, you can redownload the PDF whenever you feel like it, and this time, it will bring the highlighted text along with it. I use browser caching so that you don't have to log in but won't lose your place in the audio file,
         even if the website refreshes. I also allow for background play, so if you're listening on your phone, you can lock it or use other apps while listening. Hope this clears things up, and if it doesn't, contact me through the contact form and I'll get back to you.
-    </p>  
+    </p>  </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
+    <!-- <div class="Instructions">
+        <h2>How it works</h2>
+            <p>
+                It's really simple. Upload your research papers' PDF file by clicking the upload button. Wait for it to finish loading, and then you can start playing the TTS back to you. The read text is highlighted on the screen, which should help you focus if need be. You can pause the TTS whenever and highlight your PDF. 
+                You can also speed it up and slow it down. And maybe change the voice (still working on this). Lastly, you can redownload the PDF whenever you feel like it, and this time, it will bring the highlighted text along with it. I use browser caching so that you don't have to log in but won't lose your place in the audio file,
+                even if the website refreshes. I also allow for background play, so if you're listening on your phone, you can lock it or use other apps while listening. Hope this clears things up, and if it doesn't, contact me through the contact form and I'll get back to you.
+            </p>  
+    </div> -->
+
 </body>
+<footer>© Copyright 2025. All rights reserved.</footer>
 </html>
