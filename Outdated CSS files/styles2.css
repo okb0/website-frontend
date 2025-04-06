@@ -1,0 +1,148 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fdfaf6;
+    color: #3a3a3a;
+    line-height: 1.7;
+    padding: 1rem;
+  }
+  
+  /* Centered Container */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  
+  /* Top Navigation */
+  .topnav {
+    background-color: #eae3dc;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  
+  .topnav a {
+    color: #5a4e42;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .topnav a:hover {
+    background-color: #d6ccc2;
+    color: #3a312a;
+  }
+  
+  .topnav .active {
+    background-color: #c8b6a6;
+    color: #1e1e1e;
+  }
+  
+  /* Welcome Section */
+  .Welcome {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+  }
+  
+  .Welcome h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #4a4035;
+  }
+  
+  .Welcome p {
+    font-size: 1.05rem;
+    color: #5a4e42;
+  }
+  
+  /* Collapsible Button */
+  .collapsible {
+    background-color: #c8b6a6;
+    color: #fffdf7;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 29%;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 14px 14px 0 0;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  }
+  
+  .collapsible:hover {
+    background-color: #b5a392;
+  }
+  
+  .collapsibletitle {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .collapsible-sub {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #f0eae2;
+  }
+  
+  /* Collapsible Content */
+  .content {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background-color: #fffefc;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  }
+  
+  .content p {
+    padding: 1rem 1.5rem;
+    color: #5a4e42;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    color: #8e857a;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .topnav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .Welcome, .collapsible, .content {
+      width: 95%;
+    }
+  }
+  

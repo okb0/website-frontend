@@ -1,0 +1,251 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --main-bg: #eaf4ff;
+    --nav-bg: #1e3a8a;
+    --nav-hover: #3b82f6;
+    --text-color: white;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+    padding: 0 1rem;
+  }
+  
+/* Header container */
+/* .navbar {
+  position: relative;
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers nav in middle */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+} */ 
+
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#mobileMenu {
+  background-color: var(--nav-bg);
+  width: 100%;
+}
+
+/* Clickable logo aligned left */
+.logo {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Hamburger aligned right (mobile only) */
+.hamburger {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
+
+/* Top Navigation links centered */
+.topnav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav a {
+  color: var(--text-color);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: var(--nav-hover);
+}
+
+.topnav a.active {
+  background-color: #2563eb;
+}
+
+  
+  /* Welcome Section */
+  .Welcome {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .Welcome h1 {
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 1rem;
+  }
+  
+  .Welcome p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  /* Section */
+  .Section {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  /* Collapsible Button */
+  .collapsible {
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+    border: none;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+  }
+  
+  .collapsible:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .collapsibletitle {
+    font-weight: bold;
+  }
+  
+  .collapsible-sub {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Collapsible Content */
+  .content {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .content p {
+    padding: 1rem;
+    color: #555;
+  }
+  
+  .collapsible.active + .content {
+    border-top: none;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .topnav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .topnav.open {
+      display: flex;
+    }
+  
+    .topnav a {
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+    }
+  
+    .Welcome h1 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  
+    .Welcome p,
+    .content p {
+      font-size: 1.05rem;
+    }
+  
+    .collapsible {
+      font-size: 1.05rem;
+      padding: 1rem;
+    }
+  
+    .collapsibletitle {
+      font-size: 1.2rem;
+    }
+  
+    .collapsible-sub {
+      font-size: 1rem;
+    }
+  
+    footer {
+      font-size: 0.85rem;
+      padding: 1rem;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .topnav {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  }
+  

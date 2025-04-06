@@ -1,7 +1,7 @@
 /* Website edits */
 body {
 
-    background-color: burlywood;
+    background-color: #EAD2AC;
 
 }
 
@@ -12,7 +12,7 @@ footer {
 /* Nav bar edits */
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: #040F0F;
     overflow: hidden;
   }
   
@@ -28,13 +28,13 @@ footer {
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(197, 177, 177);
     color: black;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #C97064;
     color: white;
   }
 
@@ -58,7 +58,7 @@ footer {
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: #6B7D7D;
   }
   
   /* Style the collapsible content. Note: hidden by default */
@@ -75,15 +75,16 @@ footer {
   }
 
 .collapsibletitle {
-    color: #453F26;
+    color: #6B7D7D;
     font-weight: bold;
     font-size: 300%;
+    
 }
 
 /* Div edits */
 
 .Welcome {
-    background-color: rgb(235, 213, 186);
+    background-color: rgb(235, 235, 211);
     width: 75%;
     max-width: fit-content;
     margin-left: auto;
@@ -91,7 +92,7 @@ footer {
 }
 
 .Instructions {
-    background-color: rgb(235, 213, 186);
+    background-color: rgb(235, 235, 211);
     width: 75%;
     max-width: fit-content;
     margin-left: auto;
@@ -100,7 +101,7 @@ footer {
 }
 
 h1 {
-    color: blue;
+    color: #312509;
     font-family: verdana;
     font-size: 300%;
     text-align: center;
@@ -108,7 +109,7 @@ h1 {
   }
 
 h2 {
-    color: blue;
+    color: #312509;
     font-family: verdana;
     font-size: 300%;
     text-align: center;

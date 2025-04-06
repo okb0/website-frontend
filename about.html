@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>About Me</title>
 </head>
 <body>
-    <nav class="topnav">
+    <header class="navbar">
+        <a href="index.html" class="logo">ReadResearchPapers</a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </header>
+      <nav class="topnav" id="mobileMenu">
         <a href="index.html">Home</a>
         <a class="active" href="about.html">About Me</a>
         <a href="contact.html">Contact Me</a>
         <a href="credits.html">Credits</a>
       </nav>
+<div class="Welcome">
 <h1>Who am I?</h1>
 <p>Hi! I'm a 25-year old student master's student at the University of Leiden, studying Computer Science: Artificial Intelligence. 
     I like coming up with impossible ideas, and then making them reality, either on my own or with friends. Portfolio coming soon.
@@ -23,6 +30,18 @@
 
 
 </p>
+</div>
+<script>
+    // toggle mobile navbar visibility
+  // document.querySelector('.hamburger').addEventListener('click', function() {
+  //   const topnav = document.querySelector('.topnav');
+  //   topnav.classList.toggle('open');
+  // });
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script> 
 </body>
 <footer>© Copyright 2025. All rights reserved.</footer>
 </html>
