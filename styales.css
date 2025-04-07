@@ -1,0 +1,347 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Blue theme color */
+  :root {
+        --main-bg: #eaf4ff;
+        --nav-bg: #1e3a8a;
+        --nav-hover: #3b82f6;
+        --text-color: white;
+    }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+    padding: 0 1rem;
+  }
+  
+  /* Top Navigation */
+  .topnav {
+    background-color: #1e3a8a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .topnav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .topnav a:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .topnav .active {
+    background-color: #2563eb;
+  }
+  
+  /* Welcome Section */
+  .Welcome {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  
+  .Welcome h1 {
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 1rem;
+  }
+  
+  .Welcome p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  .Section {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  
+  /* Collapsible Button */
+  .collapsible {
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+
+  }
+  
+  .collapsible:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .collapsibletitle {
+    font-weight: bold;
+  }
+  
+  .collapsible-sub {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Collapsible Content */
+  .content {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  
+  .content p {
+    padding: 1rem;
+    color: #555;
+  }
+  
+  /* Active collapsible state */
+  .collapsible.active + .content {
+    border-top: none;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+  }
+  .hamburger {
+    display: none;
+  }
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    /* .topnav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    } */
+    .hamburger {
+        display: block;
+      }
+    /* .Welcome, .collapsible, .content {
+      width: 95%;
+    } */
+    
+    body {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+    .topnav {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    /* will wel een schaduw maar op dezelfde manier als wanneer het actief is ipv zo'n harde schaduw */
+    .topnav a {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.25rem;
+      /* font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      background-color: #1e3a8a;
+      margin: 0.25rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      transition: background 0.3s ease, box-shadow 0.3s ease; */
+    }
+
+    /* .topnav a:hover,
+    .topnav a.active {
+      background-color: #3b82f6;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    } */
+  
+    .Welcome h1 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  
+    .Welcome p,
+    .content p {
+      font-size: 1.05rem;
+    }
+  
+    .collapsible {
+      font-size: 1.05rem;
+      padding: 1rem;
+    }
+  
+    .collapsibletitle {
+      font-size: 1.2rem;
+    }
+  
+    .collapsible-sub {
+      font-size: 1rem;
+    }
+  
+    footer {
+      font-size: 0.85rem;
+      padding: 1rem;
+    }
+  }
+  
+  /* Hamburger nav bar */
+  /* Base navbar styles */
+/* Navbar container */
+.navbar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distributes logo left, hamburger right */
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  position: relative; /* Needed for absolutely centering nav */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap; */
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  /* Nav menu centered using absolute positioning */
+.navbar .topnav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+}
+  
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  /* Top navigation styles */
+  .topnav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-bg);
+    padding: 0.75rem 1rem;
+    gap: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .topnav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .topnav a.active,
+  .topnav a:hover {
+    background-color: var(--nav-hover);
+  }
+
+  /* @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar .topnav {
+      position: static;
+      transform: none;
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+  
+    .navbar .topnav.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      align-self: flex-end;
+    }
+  } */
+  
+  /* Responsive tweaks for mobile */
+  /* @media (max-width: 600px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .topnav {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+  
+    .topnav.open {
+      display: flex;
+    }
+  
+    .topnav a {
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+    }
+  
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: var(--nav-bg);
+    }
+  }
+   */
